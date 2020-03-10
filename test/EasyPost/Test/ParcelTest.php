@@ -9,9 +9,6 @@ EasyPost::setApiKey('cueqNZUb3ldeWTNX7MU3Mel8UXtaAMUi');
 
 class ParcelTest extends \PHPUnit\Framework\TestCase
 {
-
-    // TODO: set up tests for exceptions and error codes
-
     /**
      * Test the creation of a Parcel
      *
@@ -19,10 +16,12 @@ class ParcelTest extends \PHPUnit\Framework\TestCase
      */
     public function testCreate()
     {
-        $parcel_params = array("length"     => "10",
-                                "width"     => "8",
-                                "height"    => "4",
-                                "weight"    => "15");
+        $parcel_params = array(
+            "length"     => "10",
+            "width"     => "8",
+            "height"    => "4",
+            "weight"    => "15"
+        );
         $parcel = Parcel::create($parcel_params);
         $this->assertInstanceOf('\EasyPost\Parcel', $parcel);
         $this->assertIsString($parcel->id);

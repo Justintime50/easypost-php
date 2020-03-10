@@ -9,9 +9,6 @@ EasyPost::setApiKey('cueqNZUb3ldeWTNX7MU3Mel8UXtaAMUi');
 
 class ShipmentTest extends \PHPUnit\Framework\TestCase
 {
-
-    // TODO: set up tests for exceptions and error codes
-
     /**
      * Test the creation of a Shipment
      *
@@ -26,18 +23,21 @@ class ShipmentTest extends \PHPUnit\Framework\TestCase
                     "street2" => "Apt 20",
                     "city"    => "San Francisco",
                     "state"   => "CA",
-                    "zip"     => "94107"),
+                    "zip"     => "94107"
+                ),
                 "from_address"  => array(
                     "street1" => "388 Townsend St",
                     "street2" => "Apt 20",
                     "city"    => "San Francisco",
                     "state"   => "CA",
-                    "zip"     => "94107"),
+                    "zip"     => "94107"
+                ),
                 "parcel"    => array(
-                    "length"     => "10",
+                    "length"    => "10",
                     "width"     => "8",
                     "height"    => "4",
-                    "weight"    => "15")
+                    "weight"    => "15"
+                )
             )
         );
         $this->assertInstanceOf('\EasyPost\Shipment', $shipment);

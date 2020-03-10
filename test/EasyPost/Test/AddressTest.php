@@ -9,9 +9,6 @@ EasyPost::setApiKey('cueqNZUb3ldeWTNX7MU3Mel8UXtaAMUi');
 
 class AddressTest extends \PHPUnit\Framework\TestCase
 {
-
-    // TODO: set up tests for exceptions and error codes
-
     /**
      * Test the creation of an address
      *
@@ -19,11 +16,13 @@ class AddressTest extends \PHPUnit\Framework\TestCase
      */
     public function testCreate()
     {
-        $address_params = array("street1" => "388 Townsend St",
-                                "street2" => "Apt 20",
-                                "city"    => "San Francisco",
-                                "state"   => "CA",
-                                "zip"     => "94107");
+        $address_params = array(
+            "street1" => "388 Townsend St",
+            "street2" => "Apt 20",
+            "city"    => "San Francisco",
+            "state"   => "CA",
+            "zip"     => "94107"
+        );
         $address = Address::create($address_params);
         $this->assertInstanceOf('\EasyPost\Address', $address);
         $this->assertIsString($address->id);
